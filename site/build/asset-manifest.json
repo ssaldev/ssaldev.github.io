@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7b5489dc.css",
+    "main.js": "/static/js/main.b082933f.js",
+    "static/js/787.6216e3e5.chunk.js": "/static/js/787.6216e3e5.chunk.js",
+    "static/media/physicsbasedcombat.mp4": "/static/media/physicsbasedcombat.e1c3507123bc702f844a.mp4",
+    "static/media/9001 round 2.mp4": "/static/media/9001 round 2.a75ad81847c1f8a3c946.mp4",
+    "static/media/large sword upgrade.mp4": "/static/media/large sword upgrade.dafc4ebab5a91dfda01b.mp4",
+    "static/media/scr2_upscaled.png": "/static/media/scr2_upscaled.b23193f5b5413684fb06.png",
+    "static/media/skylevel.png": "/static/media/skylevel.52df51b2138d1a11a3f3.png",
+    "static/media/sphagetmonster2.png": "/static/media/sphagetmonster2.d7342ad8637010c8de95.png",
+    "static/media/gigachadhole.png": "/static/media/gigachadhole.76c005d9c468f802fbd2.png",
+    "static/media/punched.png": "/static/media/punched.e512c9afd8bfefbf61c7.png",
+    "static/media/predestruction.png": "/static/media/predestruction.6294576ffc7ab2847056.png",
+    "static/media/PUNCH1.png": "/static/media/PUNCH1.c20af3c9323607069754.png",
+    "static/media/me.png": "/static/media/me.85242fbbe304fe362a0d.png",
+    "static/media/postdestruction.png": "/static/media/postdestruction.025d08d3145f79f8871b.png",
+    "static/media/punchground.png": "/static/media/punchground.dbc54bacaf1cab0cb934.png",
+    "static/media/sharkchase2.png": "/static/media/sharkchase2.707f39ad518b7ff5f7c7.png",
+    "static/media/maincapsule (1).jpg": "/static/media/maincapsule (1).a03af83477ce6b5aa0c7.jpg",
+    "static/media/ehglogo.png": "/static/media/ehglogo.ab57f30f322fba25f822.png",
+    "static/media/tablemonster.png": "/static/media/tablemonster.ad3e918a870442204f49.png",
+    "static/media/confusedmonster.png": "/static/media/confusedmonster.90b9de272ab35f06613f.png",
+    "static/media/sphagettimonster1.png": "/static/media/sphagettimonster1.fb75f369078af341893e.png",
+    "static/media/SigmarOne-Regular.ttf": "/static/media/SigmarOne-Regular.bf407e18172292d7fe78.ttf",
+    "static/media/youtube.png": "/static/media/youtube.964a324d3748ea2f99a1.png",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.7b5489dc.css.map": "/static/css/main.7b5489dc.css.map",
+    "main.b082933f.js.map": "/static/js/main.b082933f.js.map",
+    "787.6216e3e5.chunk.js.map": "/static/js/787.6216e3e5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b5489dc.css",
+    "static/js/main.b082933f.js"
+  ]
+}

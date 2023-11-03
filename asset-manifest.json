@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.e10a6ded.css",
-    "main.js": "/static/js/main.34d5df9b.js",
+    "main.js": "/static/js/main.af45bacc.js",
     "static/js/787.6216e3e5.chunk.js": "/static/js/787.6216e3e5.chunk.js",
     "static/media/physicsbasedcombat.mp4": "/static/media/physicsbasedcombat.e1c3507123bc702f844a.mp4",
     "static/media/9001 round 2.mp4": "/static/media/9001 round 2.a75ad81847c1f8a3c946.mp4",
     "static/media/large sword upgrade.mp4": "/static/media/large sword upgrade.dafc4ebab5a91dfda01b.mp4",
     "static/media/scr2_upscaled.png": "/static/media/scr2_upscaled.b23193f5b5413684fb06.png",
-    "static/media/skylevel.png": "/static/media/skylevel.52df51b2138d1a11a3f3.png",
-    "static/media/sphagetmonster2.png": "/static/media/sphagetmonster2.d7342ad8637010c8de95.png",
-    "static/media/gigachadhole.png": "/static/media/gigachadhole.76c005d9c468f802fbd2.png",
+    "static/media/mages.png": "/static/media/mages.230e8cafea4bde02276b.png",
+    "static/media/lava-level.png": "/static/media/lava-level.5e9b9a3598a40c9e3b38.png",
+    "static/media/beam.png": "/static/media/beam.d9ca0e6b51ffdf5d792e.png",
+    "static/media/gigachadhole.png": "/static/media/gigachadhole.81c1989c2056aec5294c.png",
+    "static/media/before-destruction.png": "/static/media/before-destruction.5fb372cbb399c076880a.png",
+    "static/media/gigachad punch dodge.png": "/static/media/gigachad punch dodge.3c9ab3157298e20eb5cf.png",
+    "static/media/bpost destruction2.png": "/static/media/bpost destruction2.c24446650e5c07b1b00d.png",
+    "static/media/harold hit.png": "/static/media/harold hit.be3dbb7a7b515dc35fc8.png",
     "static/media/punched.png": "/static/media/punched.e512c9afd8bfefbf61c7.png",
-    "static/media/predestruction.png": "/static/media/predestruction.6294576ffc7ab2847056.png",
-    "static/media/PUNCH1.png": "/static/media/PUNCH1.c20af3c9323607069754.png",
     "static/media/me.png": "/static/media/me.85242fbbe304fe362a0d.png",
-    "static/media/postdestruction.png": "/static/media/postdestruction.025d08d3145f79f8871b.png",
-    "static/media/punchground.png": "/static/media/punchground.dbc54bacaf1cab0cb934.png",
-    "static/media/sharkchase2.png": "/static/media/sharkchase2.707f39ad518b7ff5f7c7.png",
     "static/media/maincapsule (1).jpg": "/static/media/maincapsule (1).a03af83477ce6b5aa0c7.jpg",
     "static/media/ehglogo.png": "/static/media/ehglogo.ab57f30f322fba25f822.png",
     "static/media/tablemonster.png": "/static/media/tablemonster.ad3e918a870442204f49.png",
@@ -27,11 +27,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.e10a6ded.css.map": "/static/css/main.e10a6ded.css.map",
-    "main.34d5df9b.js.map": "/static/js/main.34d5df9b.js.map",
+    "main.af45bacc.js.map": "/static/js/main.af45bacc.js.map",
     "787.6216e3e5.chunk.js.map": "/static/js/787.6216e3e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e10a6ded.css",
-    "static/js/main.34d5df9b.js"
+    "static/js/main.af45bacc.js"
   ]
 }

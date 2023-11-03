@@ -546,7 +546,7 @@ function App() {
           contentChunk("Art style",
             <div className='content-wrapper'>
               <img src={fetchMonsterImage(1)}></img>
-              <div><pre className='pre-tag-full'>
+              <pre className='pre-tag'>
                 <p>
                   Art style key points
                   <ul>
@@ -579,7 +579,7 @@ function App() {
                 }}>Read more</div>
               </pre>
 
-              </div>
+
               <img src={fetchMonsterImage(1)}></img>
             </div>,
 
@@ -789,10 +789,10 @@ function App() {
 
           //            content
         }
-        {}
+        { }
       </div>
 
-    
+
 
     </div >
   );

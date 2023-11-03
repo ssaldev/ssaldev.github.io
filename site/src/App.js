@@ -62,7 +62,7 @@ const contentChunkWithVideo = (title, input1, vid) => {
   return contentChunk(title,
     <div className='content-wrapper'>
 
-      <pre className='pre-tag'>
+      <pre className='pre-tag-full'>
         <div className="block-wrapper">
           <div className="pre-block">
             <video width="640" height="360" controls autoplay>
@@ -229,7 +229,7 @@ function App() {
 
           contentChunkWithVideo("Design corner stones",
 
-            <div><pre className='pre-tag'>
+            <div><pre className='pre-tag-full'>
 
               <ul>
                 <li>Things must explode</li>
@@ -253,7 +253,7 @@ function App() {
 
             <div className='content-wrapper'>
               <img src={fetchMonsterImage(0)}></img>
-              <pre className='pre-tag '>
+              <pre className='pre-tag-full '>
                 <ul class="list-paragraph">
                   {/*        <p>Player spawns into a world and waves of enemies start coming in<br />each wave needs to be totally killed off before the next one comes in</p>
 
@@ -285,7 +285,7 @@ function App() {
 
           contentChunkWithVideo("Player controller",
 
-            <div><pre className='pre-tag'>
+            <div><pre className='pre-tag-full'>
               <p className='list-paragraph'>
                 Player is controlled by using a third person character controller,
                 <br></br> the game is aiming to be simple on the surface, but have a lot of depth to it.
@@ -393,7 +393,7 @@ function App() {
 
           contentChunkWithVideo("Progression",
 
-            <div><pre className='pre-tag'>
+            <div><pre className='pre-tag-full'>
               <p>There are 2 different ways to progress in the game, by obtaining new gear, or upgrading abilities</p>
               <p>Gear</p>
               gear upgrades players passive stats
@@ -546,7 +546,7 @@ function App() {
           contentChunk("Art style",
             <div className='content-wrapper'>
               <img src={fetchMonsterImage(1)}></img>
-              <div><pre className='pre-tag'>
+              <div><pre className='pre-tag-full'>
                 <p>
                   Art style key points
                   <ul>

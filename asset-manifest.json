@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e10a6ded.css",
-    "main.js": "/static/js/main.4ae87fed.js",
+    "main.css": "/static/css/main.99d44c39.css",
+    "main.js": "/static/js/main.fd9f4914.js",
     "static/js/787.6216e3e5.chunk.js": "/static/js/787.6216e3e5.chunk.js",
     "static/media/physicsbasedcombat.mp4": "/static/media/physicsbasedcombat.e1c3507123bc702f844a.mp4",
     "static/media/9001 round 2.mp4": "/static/media/9001 round 2.a75ad81847c1f8a3c946.mp4",
@@ -18,21 +18,24 @@
     "static/media/harold hit.png": "/static/media/harold hit.be3dbb7a7b515dc35fc8.png",
     "static/media/punched.png": "/static/media/punched.e512c9afd8bfefbf61c7.png",
     "static/media/me.png": "/static/media/me.85242fbbe304fe362a0d.png",
+    "static/media/levelup2.png": "/static/media/levelup2.6c85bacf587120750785.png",
+    "static/media/levelup.png": "/static/media/levelup.de599eca444ac280c523.png",
     "static/media/maincapsule (1).jpg": "/static/media/maincapsule (1).a03af83477ce6b5aa0c7.jpg",
     "static/media/ehglogo.png": "/static/media/ehglogo.ab57f30f322fba25f822.png",
     "static/media/tablemonster.png": "/static/media/tablemonster.ad3e918a870442204f49.png",
     "static/media/confusedmonster.png": "/static/media/confusedmonster.90b9de272ab35f06613f.png",
     "static/media/sphagettimonster1.png": "/static/media/sphagettimonster1.fb75f369078af341893e.png",
     "static/media/SigmarOne-Regular.ttf": "/static/media/SigmarOne-Regular.bf407e18172292d7fe78.ttf",
+    "static/media/emoji.png": "/static/media/emoji.3515173a555ba2b105c9.png",
     "static/media/youtube.png": "/static/media/youtube.964a324d3748ea2f99a1.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.e10a6ded.css.map": "/static/css/main.e10a6ded.css.map",
-    "main.4ae87fed.js.map": "/static/js/main.4ae87fed.js.map",
+    "main.99d44c39.css.map": "/static/css/main.99d44c39.css.map",
+    "main.fd9f4914.js.map": "/static/js/main.fd9f4914.js.map",
     "787.6216e3e5.chunk.js.map": "/static/js/787.6216e3e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e10a6ded.css",
-    "static/js/main.4ae87fed.js"
+    "static/css/main.99d44c39.css",
+    "static/js/main.fd9f4914.js"
   ]
 }

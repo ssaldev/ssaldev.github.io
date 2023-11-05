@@ -231,8 +231,7 @@ function App() {
             <p class="list-paragraph">
               <a href="https://www.dropbox.com/scl/fi/fx1szv1hr8nge54r4r2yz/fd-2.zip?rlkey=9gvoy4jk361yj1m0fgb4qdl21&raw=1" className="download-btn">Download</a>
               <ul>
-                <li>You can most likely break the game if you try</li>
-
+               
                 <li>Some abilities are still in prototype stage</li>
 
                 <li>if you ever get stuck use the killall command from the debug menu</li>
@@ -240,6 +239,7 @@ function App() {
                 <li>some soundeffects are missing</li>
 
                 <li>game has a lot of room for optimization, recommended to use powerful pc</li>
+                <li>You can enable more content in settings => toggle enableExperimentalContent</li>
 
               </ul>
             </p>
@@ -258,7 +258,7 @@ function App() {
                 <li>Physics creates unexpected and hilarious situations</li>
                 <li>Difficult at first, but player becomes ultra powerful</li>
                 <li>Powerscaling Anime inspiration</li>
-                <li>Simple to get into but provide a lot of depth in terms of upgrades</li>
+                <li>Simple to get into but provide a lot of depth in terms of upgrades (treat game as a sandbox)</li>
               </ul>
             </pre>
             </div>,
@@ -834,7 +834,10 @@ function App() {
                     //     <p className='list-paragraph2'> so the monster can consume the planet no problem.</p></p>
                   }
                   <p>The invasion is the 9-5 job for these monsters<br></br>
-                    <p className='list-paragraph2'> they don't really want to be there, and they fight carelessly,  sometimes even using each other as projectiles just to destroy the world faster.</p></p>
+                    <p className='list-paragraph2'> they don't really want to be there, and they fight carelessly,
+                      sometimes even using each other as projectiles just to destroy the world faster.<br></br>
+                      A Boss monster might sit down on a beach chair, put on the shades, eat icecream, and watch their minions do their thing.
+                      </p></p>
 
                 </p>
 

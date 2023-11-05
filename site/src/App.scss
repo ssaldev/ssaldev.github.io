@@ -3,12 +3,12 @@
   src: url("./Assets/SigmarOne-Regular.ttf") format('truetype');
   text-align: center;
 }
-
 .App {
+  overflow-x: hidden;
   // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   //-webkit-text-stroke: 0.25px black;
   // font-family: 'CustomFont';
-  font-family: 'CustomFont2', sans-serif !important;
+  font-family: 'CustomFont2', sans-serif; //!important;
   color: white;
 
   min-height: 100vh;
@@ -206,8 +206,9 @@
 
   .monster-img {}
 
- 
+
 }
+
 .pre-tag-img {
   display: flex;
   flex-direction: column;
@@ -218,12 +219,13 @@
 
   }
 }
+
 .pre-tag {
 
 
-  font-family: 'CustomFont2', sans-serif !important;
+  font-family: 'CustomFont2', sans-serif; // !important;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 15px;
   //  min-width: 50%;
   width: 50%;
@@ -239,9 +241,9 @@
 
 
 .pre-tag-full {
-  font-family: 'CustomFont2', sans-serif !important;
+  font-family: 'CustomFont2', sans-serif; // !important;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 15px;
   //  min-width: 50%;
   width: 100%;
@@ -300,24 +302,39 @@
   font-size: 24px;
 
 }
-.download-btn:hover {
-  background-color: #0056b3; /* Change to a darker shade for hover effect */
+
+.code-architecture {
+  max-width: 100% !important; /* Image won't exceed the container's width */
+  max-height: 100% !important; /* Image won't exceed the container's height */
+  width: auto !important; /* Let the image width adjust to its original aspect ratio */
+  height: auto !important; /* Let the image height adjust to its original aspect ratio */
+
+
 }
+
+.download-btn:hover {
+  background-color: #0056b3;
+  /* Change to a darker shade for hover effect */
+}
+
 .download-btn.large {
   padding: 15px 30px;
   font-size: 18px;
 }
 
 .download-btn.red {
-  background-color: #ff0000; /* Change to a red color */
+  background-color: #ff0000;
+  /* Change to a red color */
 }
 
 .download-btn {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0074d9; /* Change to your desired background color */
-  color: #fff; /* Text color */
+  background-color: #0074d9;
+  /* Change to your desired background color */
+  color: #fff;
+  /* Text color */
   text-decoration: none;
   border: none;
   border-radius: 5px;
@@ -326,13 +343,22 @@
   text-align: center;
   transition: background-color 0.3s;
 }
+
 .list-paragraph2 {
+
+  font-family: sans-serif;
   font-size: 16px;
-  color: black;
+  color: white;
   -webkit-text-stroke: 0.25px black;
- // -webkit-text-stroke: none !important;
+  // -webkit-text-stroke: none !important;
 
 }
+
+.list-paragraph3 {
+  font-size: 12px;
+ 
+}
+
 .block-wrapper {
   display: flex;
 }
@@ -356,6 +382,7 @@
 }
 
 .blur-hard {
+
   filter: blur(15px);
   transition: 2.2s ease-in-out;
 }

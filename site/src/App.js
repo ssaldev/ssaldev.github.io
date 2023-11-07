@@ -184,7 +184,7 @@ function App() {
       <div className='primary-content'>
         {
           // <img class="game-logo" src={maincapsule}></img>
-          contentChunk("Trailer",
+          contentChunk("Gameplay Trailer",
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ias3KT3sFRE" frameborder="0" allowfullscreen="true"></iframe>
           )
         }
@@ -202,7 +202,7 @@ function App() {
               </p>
         */}
               <p className='list-paragraph'>
-                Is a physics driven roguelite / soulslike where you play as a superhero and its your job to save the world from an alien invasion where the world is getting totally destroyed!<br></br><br></br>
+                Is a physics based roguelite / soulslike where you play as a superhero and its your job to save the world from an alien invasion where the world is getting totally destroyed!<br></br><br></br>
                 <p className='list-paragraph2'>
                   As you fight through enemies, player gets stronger during the fight (think of tournament of power in Dragon Ball Super)<br></br><br></br>
                   The game uses physics as a backbone for ridiculous anime powerscaling, where you can physically see a difference in the combat, the more stronger you get.
@@ -230,15 +230,14 @@ function App() {
           contentChunkWithImages("Demo",
             <p class="list-paragraph">
               <a href="https://www.dropbox.com/scl/fi/mpq9mcaykpt2xetg2ac2h/Epic-Hero-Game-0.2.zip?rlkey=gqnj155a6o6yf5cbt2dfrzcq1&raw=1" className="download-btn">Download</a>
-              <ul>
-               
-                <li>Some abilities are still in prototype stage</li>
+              <ul class="list-paragraph2">
 
-                <li>if you ever get stuck use the killall command from the debug menu</li>
-                <li>no full controller support at the moment</li>
-                <li>some soundeffects are missing</li>
 
-                <li>game has a lot of room for optimization, recommended to use powerful pc</li>
+                <li>If you ever get stuck use the killall command from the debug menu</li>
+                <li>No full controller support at the moment</li>
+                <li>Some soundeffects are missing</li>
+
+                <li>Game has a lot of room for optimization, recommended to use powerful pc</li>
                 <li>You can enable more content in settings => toggle enableExperimentalContent</li>
 
               </ul>
@@ -319,25 +318,31 @@ function App() {
         }
         {
 
-          contentChunkWithVideo("Player controller",
+          contentChunkWithVideo("Character controller",
 
             <div><pre className='pre-tag-full'>
+              <p className='list-paragraph2'>
+                All characters are ragdolls, and use procedural leg animation, which makes integrating new attacks / spells / abilities is relatively easy to make look natural.<br></br>
+                If there are many ragdolls on screen at the same time, they may use an optimized kinematic state, where the ragdoll is only simulated when its getting hit.<br></br>
+                A ragdoll may be configured to look "drunk", which happens to fit quite well the goofy invading aliens.
+              </p>
               <p className='list-paragraph'>
                 <div className='list-paragraph2'>  Player is controlled by using a third person character controller,
                   <br></br> the game is aiming to be simple on the surface, but have a lot of depth to it.
-                  <br></br>This means that all abilities must work using the following variables
+                  <br></br>This means that all abilities must work using the following variables:
                 </div>
                 <ul>
                   <li>Autotarget position</li>
 
                   <li>Fast attack input (release key withing .20 seconds)</li>
                   <li>Heavy attack input (release key after .20 seconds)</li>
+                  <li>Camera raycast</li>
                   <li>input being held down</li>
 
 
                 </ul>
-                <div className='list-paragraph2'>                <p>Combat works by automatically targeting nearby enemies,<br></br> the fun part of the game is executing cool moves & seeing how enemies react to it</p>
-                  <p>Camera orbits around the character to let players see their character from all angles,<br></br> but rotating camera is not required for combat, as action should be the thing thats moving, not the camera</p>
+                <div className='list-paragraph2'>                <p>Combat works by automatically targeting nearby enemies,<br></br> the fun part of the game is executing cool moves & seeing how enemies react to it.</p>
+                  <p>Camera orbits around the character to let players see their character from all angles,<br></br> but rotating camera is not required for combat, as action should be the thing thats moving, not the camera.</p>
                 </div>
 
                 <p>Mobility</p>
@@ -348,6 +353,7 @@ function App() {
                   <p>
                     It will become handy in later stages of the game, when the level transitions into lava mode.
                   </p>
+                  This is an area that still needs a lot of work, especially dynamic climbing, it should be smooth in all scenarios.
 
 
                 </div>
@@ -457,6 +463,10 @@ function App() {
                 </div>
                 <div className='pre-tag'>
                   <p className='list-paragraph'>
+                    <p >
+                      Progression should be visual, when player gets stronger, player / combat should look different
+                      <p className='list-paragraph2'>Just like Dragonball has different forms for different power levels.</p>
+                    </p>
                     <p className='list-paragraph2'>
                       There should not be a "right way to play", in the ideal world players would come up with wacky builds that i didnt even intend in the beginning.
                       <br></br>
@@ -464,9 +474,7 @@ function App() {
                       </p>
 
                     </p>
-                    <p className='list-paragraph2'>
-                      Progression should be visual, when player gets stronger, player / combat should look different, just like Dragonball has different forms for different power levels
-                    </p>
+
                     <p className='list-paragraph2'>
                       Player progresses through slaying enemies and picking up xp dropped by them, xp gained is based on how difficult the slain monster is configured to be.
                     </p>
@@ -619,7 +627,7 @@ function App() {
                   <ul class='list-paragraph'>
                     <li>Levels are medium-sized islands (250x250)<p className='list-paragraph2'>  with a lot of open space to fight in.</p></li>
                     <li>Levels should look fruitful and filled with life.<p className='list-paragraph2'> </p></li>
-                    <li>There shouldn't have too many props<p className='list-paragraph2'> just enough to make it seem like there might be someone living there.</p></li>
+                    <li>There shouldn't have to be many props<p className='list-paragraph2'> just enough to make it seem like there might be something living there.</p></li>
                     {
                       // <li>Limited amount of props <p className='list-paragraph2'>Every prop on the map should have a purpose, and something can interact with it.</p></li>
                     }
@@ -776,7 +784,7 @@ function App() {
                       Characters are created in blender, by sculpting a high poly model first, and then creating a shrinkwrap low poly model thats used in the game,
                       extra detail is added through a baked normal map.
                     </p>
-                    <p>The weirder the monsters look, the better it is</p>
+                    <p>The weirder the monsters look, the better it is.</p>
 
                   </div>)
                 }
@@ -822,12 +830,12 @@ function App() {
 
                 <p class='list-paragraph'>
                   <p>player Character personality is childish, dont take things too seriously, but has a serious side aswell</p>
-                  <p className='list-paragraph2'>The game is by no means story driven, but small part of lore exists to explain why enemies are the way they are</p>
+                  <p className='list-paragraph2'>The game is by no means story driven, but small part of lore exists to explain why enemies are the way they are.</p>
 
                   <p>The colossal planet-devouring spaghetti monster is on its way<br></br>
                   </p>
                   <p className='list-paragraph2'>there's one problem though, the monster can't quite chew planets in one go. <br></br>
-                    So they send a group of interdimensional monsters to blow the planet into atoms<br></br>
+                    So they send a group of interdimensional monsters to blow the planet into atoms.<br></br>
                   </p>
 
                   {
@@ -837,7 +845,7 @@ function App() {
                     <p className='list-paragraph2'> they don't really want to be there, and they fight carelessly,
                       sometimes even using each other as projectiles just to destroy the world faster.<br></br>
                       A Boss monster might sit down on a beach chair, put on the shades, eat icecream, and watch their minions do their thing.
-                      </p></p>
+                    </p></p>
 
                 </p>
 
@@ -934,7 +942,7 @@ function App() {
                       Simplified overview of EHG Code architecture<br></br>
                       (CLARIFICATION; Entity is not related to unity ECS in any way, its built using GameObjects runtime, just a naming convention)<br></br>
                       Codebase & tools have been designed with Code First approach, where most of the actual work behind the game is done in code.
-                      <br></br><p>And it needs to be flexible enough to support my wild imagination</p>
+                      <br></br><p>And it needs to be flexible enough to support my wild imagination.</p>
                     </p>
                     <img className="code-architecture" src={require("./Assets/ehg-code-diagram.png")}></img>
                   </div>
@@ -1076,10 +1084,10 @@ function App() {
 
                 <div className=' list-paragraph2'>
                   Game is best suited for people who like to bootup a game a turn their brain off, and smack some aliens with Dragonball / One Punch Man style ridiculous combat.
-                  <p><br></br>             <div className=' list-paragraph2'>People who like to experiment with things are most likely find the game most enjoyable, as at its core it is a roguelite, with some souls like elements to keep things interesting,</div>
+                  <p><br></br>             <div className=' list-paragraph2'>People who like to experiment with things are most likely find the game most enjoyable, as at its core it is a roguelite, with some souls like elements to keep things interesting.</div>
                   </p>
                   <p>
-                    <br></br><div className=' list-paragraph2'>but its not a true souls like where "difficulty" is a feature, rather bosses are hard at first to create sense of progression when you finally do get strong.</div>
+                    <br></br><div className=' list-paragraph2'>But its not a true souls like where "difficulty" is a feature, rather bosses are hard at first to create sense of progression when you finally do get strong.</div>
                   </p>
 
                 </div>

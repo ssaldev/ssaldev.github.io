@@ -229,7 +229,7 @@ function App() {
 
           contentChunkWithImages("Demo",
             <p class="list-paragraph">
-              <a href="https://www.dropbox.com/scl/fi/fx1szv1hr8nge54r4r2yz/fd-2.zip?rlkey=9gvoy4jk361yj1m0fgb4qdl21&raw=1" className="download-btn">Download</a>
+              <a href="https://www.dropbox.com/scl/fi/mpq9mcaykpt2xetg2ac2h/Epic-Hero-Game-0.2.zip?rlkey=gqnj155a6o6yf5cbt2dfrzcq1&raw=1" className="download-btn">Download</a>
               <ul>
                
                 <li>Some abilities are still in prototype stage</li>
@@ -971,7 +971,7 @@ function App() {
                     Marcus Rose |<span className='list-paragraph2'> Level Design, General assistant</span>
                   </li>
                   <li>
-                    Joona lätti | <span className='list-paragraph2'>Music</span>
+                    Joona lätti | <span className='list-paragraph2'>(trailer) Music</span>
                   </li>
                   <li>
                     Unity Asset Store | <span className='list-paragraph2'>Animations, Textures, particles and various plugins</span>

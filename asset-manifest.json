@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a276b059.css",
-    "main.js": "/static/js/main.30d92830.js",
+    "main.js": "/static/js/main.805f5fa2.js",
     "static/js/787.6216e3e5.chunk.js": "/static/js/787.6216e3e5.chunk.js",
     "static/media/physicsbasedcombat.mp4": "/static/media/physicsbasedcombat.e1c3507123bc702f844a.mp4",
     "static/media/9001 round 2.mp4": "/static/media/9001 round 2.a75ad81847c1f8a3c946.mp4",
@@ -37,11 +37,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.a276b059.css.map": "/static/css/main.a276b059.css.map",
-    "main.30d92830.js.map": "/static/js/main.30d92830.js.map",
+    "main.805f5fa2.js.map": "/static/js/main.805f5fa2.js.map",
     "787.6216e3e5.chunk.js.map": "/static/js/787.6216e3e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a276b059.css",
-    "static/js/main.30d92830.js"
+    "static/js/main.805f5fa2.js"
   ]
 }

@@ -238,7 +238,9 @@ function App() {
                 <li>Some soundeffects are missing</li>
 
                 <li>Game has a lot of room for optimization, recommended to use powerful pc</li>
-                <li>You can enable more content in settings => toggle enableExperimentalContent</li>
+                <li>Sometimes the transition between active ragdoll and optimized state can be snappy</li>
+                <li>You can enable more content in settings => toggle enableExperimentalContent
+                  <p className='list-paragraph3'>this option adds more abilities and loot to the game, but this content can be very unbalanced or technically broken.</p></li>
 
               </ul>
             </p>

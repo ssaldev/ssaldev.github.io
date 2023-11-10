@@ -868,7 +868,7 @@ function App() {
                   <ul className=' list-paragraph2'>
                     <li>Dodging based combat (Dark Souls / Witcher 3)</li>
                     <li>Unique spell crafting (Vampire survivors, Hades)</li>
-                    <li>Mobile character controller (Sly Cooper series)</li>
+                    <li>Mobile character controller (Sly Cooper series / Worms 3D)</li>
                     <li>Unpredictable / hilarious nature of game physics (Totally Accurate Battle Simulator)</li>
                     <li>Over the top powerscaling (Dragonball / One Punch Man)</li>
                   </ul>

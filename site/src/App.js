@@ -7,6 +7,7 @@ import ehgFace from './Assets/emoji.png';
 import youtubeLogo from './Assets/youtube.png';
 import ehgBackground from './Assets/scr2_upscaled.png';
 import twitterLogo from './Assets/Twitter_Logo_Blue.png';
+import discordLogo from './Assets/Discord-Logo-Color.png';
 import twitchLogo from './Assets/Glitch_Purple_RGB.png';
 import ehgLogo from './Assets/ehglogo.png';
 import maincapsule from './Assets/maincapsule (1).jpg';
@@ -174,9 +175,11 @@ function App() {
           <Social linkTo={"https://twitter.com/Ssaldev"} image={twitterLogo} />
           <Social linkTo={"https://www.youtube.com/@scuffedgamedev"} image={youtubeLogo} />
           <Social linkTo={"https://www.twitch.tv/clayman_dev"} image={twitchLogo} />
+          <Social linkTo={"https://discord.gg/YBESVNMwku"} image={discordLogo} />
           <Social linkTo={"https://store.steampowered.com/app/2081720/Epic_Hero_Game/"} image={steamLogo} />
+    
         </div>
-
+      
 
         <img class="game-logo" src={ehgLogo}></img>
 
@@ -976,7 +979,7 @@ function App() {
                 <ul>
                   <li>
                     Samuli Salonen | <span className='list-paragraph2'>Studio Owner, Programming, Game Design, 3D Modeling, Community manager</span>
-
+                    <br></br><a className='link'href='https://samulisalonen.github.io/'>Portfolio</a>
                   </li>
 
                   <li>

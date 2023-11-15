@@ -1080,7 +1080,7 @@ function App() {
                 <ul>
 
                   <li>
-                    Steam wishlists: 1001
+                    Steam wishlists: 1283
                   </li>
                   <li>
                     Twitch following: 1600

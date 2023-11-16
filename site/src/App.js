@@ -981,7 +981,7 @@ function App() {
                 <ul>
                   <li>
                     Samuli Salonen | <span className='list-paragraph2'>Studio Owner, Programming, Game Design, 3D Modeling, Community manager</span>
-                    <br></br><a className='link'href='https://samulisalonen.github.io/'>Portfolio</a>
+                    <br></br><a className='link'href='https://samulisalonen.dev/'>Portfolio</a>
                   </li>
 
                   <li>

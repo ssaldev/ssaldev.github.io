@@ -179,9 +179,9 @@ function App() {
           <Social linkTo={"https://discord.gg/YBESVNMwku"} image={discordLogo} />
           <Social linkTo={"https://www.tiktok.com/@scuffedgamedev"} image={tiktokLogo} />
           <Social linkTo={"https://store.steampowered.com/app/2081720/Epic_Hero_Game/"} image={steamLogo} />
-    
+
         </div>
-      
+
 
         <img class="game-logo" src={ehgLogo}></img>
 
@@ -236,7 +236,8 @@ function App() {
 
           contentChunkWithImages("Demo",
             <p class="list-paragraph">
-              <a href="https://www.dropbox.com/scl/fi/mpq9mcaykpt2xetg2ac2h/Epic-Hero-Game-0.2.zip?rlkey=gqnj155a6o6yf5cbt2dfrzcq1&raw=1" className="download-btn">Download</a>
+              <a href="https://www.dropbox.com/scl/fi/mpq9mcaykpt2xetg2ac2h/Epic-Hero-Game-0.2.zip?rlkey=gqnj155a6o6yf5cbt2dfrzcq1&raw=1" className="download-btn">Download patch 0.2</a>
+
               <ul class="list-paragraph2">
 
 
@@ -249,6 +250,16 @@ function App() {
                 <li>You can enable more content in settings => toggle enableExperimentalContent
                   <p className='list-paragraph3'>this option adds more abilities and loot to the game, but this content can be very unbalanced or technically broken.</p></li>
 
+              </ul>
+
+              <a href="https://www.dropbox.com/scl/fi/l0znnau8wxvtpy63u3k0p/Epic-Hero-Game-0.21.zip?rlkey=mwvu5hmp6ivlxtzxjg8ru3bsb&raw=1" className="download-btn">Download patch 0.21</a>
+              <p className='list-paragraph3'>Patch notes</p>
+              <ul class="list-paragraph2">
+
+
+                <li>Significant physics smoothness improvements</li>
+                <li>Energy blast has juicier animations</li>
+            
               </ul>
             </p>
             , 3, 1)
@@ -981,7 +992,7 @@ function App() {
                 <ul>
                   <li>
                     Samuli Salonen | <span className='list-paragraph2'>Studio Owner, Programming, Game Design, 3D Modeling, Community manager</span>
-                    <br></br><a className='link'href='https://samulisalonen.dev/'>Portfolio</a>
+                    <br></br><a className='link' href='https://samulisalonen.dev/'>Portfolio</a>
                   </li>
 
                   <li>
@@ -1080,7 +1091,7 @@ function App() {
                 <ul>
 
                   <li>
-                    Steam wishlists: 1506 
+                    Steam wishlists: 1506
                   </li>
                   <li>
                     Twitch following: 1600

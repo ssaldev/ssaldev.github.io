@@ -1091,7 +1091,7 @@ function App() {
                 <ul>
 
                   <li>
-                    Steam wishlists: 1785
+                    Steam wishlists: 2423
                   </li>
                   <li>
                     Twitch following: 1600
@@ -1100,7 +1100,7 @@ function App() {
                     Twitter following: 1989
                   </li>
                   <li>
-                    Tiktok following: 1655
+                    Tiktok following: 3090
                   </li>
 
                 </ul>

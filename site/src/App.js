@@ -118,7 +118,7 @@ const contentChunkWithImages = (title, input1, img1, img2) => {
   return contentChunk(title,
     <div className='content-wrapper'>
       <img className="monster-img" src={fetchMonsterImage(img1)}></img>
-      <pre className='pre-tag'>
+      <pre className='pre-tag reset-left'>
         {input1}
       </pre>
       <img className="monster-img" src={fetchMonsterImage(img2)}></img>
@@ -200,7 +200,7 @@ function App() {
         {
           contentChunkWithVideo("Summary", <div>
             <p>
-              <div className="ehg-highlight-font"><strong>Epic Hero Game</strong></div>
+              <div className="list-paragraph2"><strong>Epic Hero Game</strong></div>
               {
                 //    is a roguelite/soulslike about a reincarnated superhero who was looking to relax in the afterlife but, due to a certain set of events, ends up helping to save the world from an alien invasion that threatens to destroy it, quite literally.
               }
@@ -214,6 +214,8 @@ function App() {
                   As you fight through enemies, player gets stronger during the fight (think of tournament of power in Dragon Ball Super)<br></br><br></br>
                   The game uses physics as a backbone for ridiculous anime powerscaling, where you can physically see a difference in the combat, the more stronger you get.
                 </p>
+                <p>(This page describes patch 0.3 since 29.12.2024)</p>
+                <a href="https://ko-fi.com/scuffedgamedev"><img style={{ "width": "64px" }} src={require("./Assets/ko-fi.png")}></img>Support development</a>
               </p>
             </p>
 
@@ -259,7 +261,20 @@ function App() {
 
                 <li>Significant physics smoothness improvements</li>
                 <li>Energy blast has juicier animations</li>
-            
+
+              </ul>
+
+              <p className='list-paragraph3'>Patch notes</p>
+              <ul class="list-paragraph2">
+
+                0.3
+                <li>EHG engine rework</li>
+                <li>Fights are now encounter based, that are placed on islands around the map</li>
+                <li>Combat system is more robust</li>
+                <li>Aiming system improvements</li>
+                <li>Way less content, but more stable engine</li>
+                <li>Join discord to be notified when build is ready</li>
+
               </ul>
             </p>
             , 3, 1)
@@ -268,7 +283,7 @@ function App() {
 
           contentChunkWithVideo("Design corner stones",
 
-            <div><pre className='pre-tag-full'>
+            <p className='list-paragraph'>
 
               <ul>
                 <li>Explosions are cool</li>
@@ -279,8 +294,8 @@ function App() {
                 <li>Powerscaling Anime inspiration</li>
                 <li>Simple to get into but provide a lot of depth in terms of upgrades (treat game as a sandbox)</li>
               </ul>
-            </pre>
-            </div>,
+
+            </p>,
             require("./Assets/ehgvids/9001 round 2.mp4")
 
 
@@ -293,7 +308,7 @@ function App() {
 
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(0)}></img>
-              <pre className='pre-tag-full '>
+              <pre className='pre-tag-full reset-left'>
                 <ul class="list-paragraph">
                   {/*        <p>Player spawns into a world and waves of enemies start coming in<br />each wave needs to be totally killed off before the next one comes in</p>
 
@@ -305,11 +320,17 @@ function App() {
                   </p>
         */}
                   <p>Gameplay loop can be summarized by the following:</p>
-                  <ul>
-                    <li>Enemy spawns</li>
-                    <li>Player dodges enemy ability</li>
+                  <ul class='list-paragraph2'>
+                    <li>Walk into an encounter (island)</li>
+                    <li>Complete encounter by killing an enemy for example</li>
+                    <li>Repeat</li>
+                  </ul>
+                  <p>Combat loop can be summarized by the following</p>
+                  <ul class='list-paragraph2'>
+                    <li>Pseudo turn based</li>
+                    <li>Player can attack enemies up to 3 times in a row (attack speed works as a modifier), before they force an attack unto you</li>
 
-                    <li>Enemy is stunned as a reward for dodging an attack</li>
+                    <li>Missing a dodge window is punished by large amount of damage or knockback</li>
 
                     <li>Player hits enemy, eventually kills it, and picks up xp</li>
 
@@ -318,13 +339,8 @@ function App() {
                     <li>Repeat</li>
                   </ul>
                   <p className=" list-paragraph2">
-                    <p>The game starts with an elderly character letting the player know that the world is in grave danger.</p>
-                    <p>The NPC teaches the player all the basic game mechanics that the game will use, such as movement, light and heavy attacks, and dodging.</p>
-                    <p>The tutorial ends when Harold, one of the minibosses spawns in, and knocks the player down, where the rest of the game takes place.</p>
-                    <p>To create a sense of "win against all odds" the player starts with nothing.<br></br> Player will get stronger during the fight, learning new skills, and obtaining new items on the fly.</p>
-                    <p>Enemies come in waves and are meant to be silly by design.</p>
-                    <p>Early enemies are balanced against the player when they have nothing, to give players the chance to learn the mechanics properly and give a brief moment when players become incredibly powerful at the end of the first arc.</p>
-                    <p>Later enemies will be balanced against a max level player in a way where even one mistake can mean game over.</p>
+                    <p>The game starts with the player being reincarnated in the world, starting with no items</p>
+                    <p>Player will walk into nearby encounters, completing them rewards the player with xp,<br></br>and with enough xp the player can level up their abilities</p>
                   </p>
                 </ul>
 
@@ -338,56 +354,38 @@ function App() {
         }
         {
 
-          contentChunkWithVideo("Character controller",
+          contentChunkWithVideo("Animation system",
 
-            <div><pre className='pre-tag-full'>
+            <div className='list-paragraph'>
               <p className='list-paragraph2'>
-                All characters are ragdolls, and use procedural leg animation, which makes integrating new attacks / spells / abilities is relatively easy to make look natural.<br></br>
-                If there are many ragdolls on screen at the same time, they may use an optimized kinematic state, where the ragdoll is only simulated when its getting hit.<br></br>
-                A ragdoll may be configured to look "drunk", which happens to fit quite well the goofy invading aliens.
+                What makes anime great is the animation,<br></br> this means that the game needs a very robust animation system,<br></br>where every little detail can be adjusted using variables.
               </p>
-              <p className='list-paragraph'>
-                <div className='list-paragraph2'>  Player is controlled by using a third person character controller,
-                  <br></br> the game is aiming to be simple on the surface, but have a lot of depth to it.
-                  <br></br>This means that all abilities must work using the following variables:
-                </div>
-                <ul>
-                  <li>Autotarget position</li>
+              <p className='list-paragraph2'>
+                Combat should look visually different based on player's stats,
+                If player has a lot of strength, the hits should reflect that.
+                <br></br>This is achieved with custom animation system that dynamically cuts animations into keyframes
+                <br></br><b>Keyframes for attacks are as following:</b>
+                <li>Transition (transition from whatever state the skeleton currently is in, this includes physics blending)</li>
+                <li>Charge up (charge up state, for example raise weapon, ready to attack)</li>
+                <li>Charge up alert(primarly used for enemy ai to let the player know, now is time to dodge)</li>
 
-                  <li>Fast attack input (release key withing .20 seconds)</li>
-                  <li>Heavy attack input (release key after .20 seconds)</li>
-                  <li>Camera raycast</li>
-                  <li>input being held down</li>
+                <li>Collider (this is when hit can occur, also defined hitstop)</li>
 
+                <li>Collider to end(finishes the animation)</li>
 
-                </ul>
-                <div className='list-paragraph2'>                <p>Combat works by automatically targeting nearby enemies,<br></br> the fun part of the game is executing cool moves & seeing how enemies react to it.</p>
-                  <p>Camera orbits around the character to let players see their character from all angles,<br></br> but rotating camera is not required for combat, as action should be the thing thats moving, not the camera.</p>
-                </div>
-
-                <p>Mobility</p>
-                <div className='list-paragraph2'>
-                  <p>
-                    When player is playing the game, they should feel like they are an actual superhero, this means that you should be able to do wild acrobatics.
-                  </p>
-                  <p>
-                    It will become handy in later stages of the game, when the level transitions into lava mode.
-                  </p>
-                  This is an area that still needs a lot of work, especially dynamic climbing, it should be smooth in all scenarios.
-
-
-                </div>
+                <li>Exit (transition back to default state)</li>
               </p>
+
               {/*
               <p className='list-paragraph'>Third person controller, as being able to see the physical difference in appearance is big part about the game.
                 <br></br>   Combat works by automatically targeting nearest enemy
                 <br></br>Camera can orbit around the player, but rotating it is not neccesary for combat, as action should be the thing that is moving, not the camera.
                 <div className='btn'>Read more</div></p>
         */     }
-            </pre>
+
 
             </div>,
-            require("./Assets/ehgvids/large sword upgrade.mp4")
+            require("./Assets/ehgvids/high asms.mp4")
 
 
           )
@@ -398,7 +396,7 @@ function App() {
 
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(4)}></img>
-              <pre className='pre-tag'>
+              <pre className='pre-tag reset-left'>
                 Abilities are the base building blocks for creating a custom superheroes
                 <div className='list-paragraph2'>
                   Only mobility & basic attacks are actually REQUIRED to complete a run.
@@ -411,28 +409,31 @@ function App() {
                       simpleListItemP("Mobility (Left Shift)",
                         <div className='list-paragraph2'>
                           Used to dodge / gapclose enemies<br></br>
-                          Upgrades to flight
+                          Upgrades to dash
                         </div>),
 
-                      simpleListItemP("Basic attacks (Left mouse btn or (R))",
+                      simpleListItemP("Basic attacks (Mouse buttons for individual arms)",
                         <div className='list-paragraph2'>
-                          You can use either melee, or range basic attacks<br></br>
-                          You can use basic attacks in 3 different ways<br></br>
-                          - fast attack (no ability upgrades will be applied)<br></br>
-                          - Heavy attack (charge time is slower, but heavy upgrades are applied)<br></br>
-                          - Heavy attack + Powerup (Same as heavy attack, but powerup upgrades are also applied)
+                          Basic attacks are designed to be simple, but to grow more complex as you combine upgrades together
+                          <ul>
+                            <li>Punches / Sword attacks</li>
+
+                            <li>Magic projectiles</li>
+                          </ul>
+                        </div>),
+                      simpleListItemP("Utilities (Q)",
+                        <div className='list-paragraph2'>
+                          Utilities are skills that let you travel between encounters faster<br></br>
+
+                          <li>Flight</li>
+                          <li>Grappling hook</li>
+                          <li>Horse</li>
 
                         </div>),
-                      simpleListItemP("Utilities (T)",
+                      simpleListItemP("Special attack (R)",
                         <div className='list-paragraph2'>
-                          Ability that you can change with action wheel (Q)<br></br>
-                          Grappling hook, Telekinesis, etc
-                        </div>),
-                      simpleListItemP("Ultimate attack (F)",
-                        <div className='list-paragraph2'>
-                          Melee attack with a gap closer
-                          - Freezes time
-                          - Lets player aim where to knockback enemies
+                          Anime finisher move, this animation can use both arms, will use significantly different design from basic attacks.
+                          For example, a finisher move would be a skill that lets you charge all of your mana into a projectile, increasing it size.
                         </div>),
 
                       simpleListItemP("Powerup mode (X)",
@@ -481,80 +482,59 @@ function App() {
                   {/*      <div className='btn'>Read more</div>
 */}
                 </div>
-                <div className='pre-tag'>
-                  <p className='list-paragraph'>
+                <div className='pre-tag reset-left'>
+                  <p className='list-paragraph list-paragraph2'>
                     <p >
-                      Progression should be visual, when player gets stronger, player / combat should look different
-                      <p className='list-paragraph2'>Just like Dragonball has different forms for different power levels.</p>
+                      Player progression is tied to a level that should be a clear indication of how far the player is in the game, level 50 player should be able to beat level 10 enemy VERY easily, while level 100 enemy should be giving player hard time
+
                     </p>
                     <p className='list-paragraph2'>
-                      There should not be a "right way to play", in the ideal world players would come up with wacky builds that i didnt even intend in the beginning.
-                      <br></br>
-                      <p className='list-paragraph3'>For example, imagine stacking up a lot of health, and then unlocking a passive that turns 10% of your health into damage.
-                      </p>
+
 
                     </p>
 
-                    <p className='list-paragraph2'>
-                      Player progresses through slaying enemies and picking up xp dropped by them, xp gained is based on how difficult the slain monster is configured to be.
-                    </p>
+
                     <p>
-                      <p className='list-paragraph2'> When player meets xp threshold, they level up, and get 4 options how to improve their character, these options are:
+                      <p className='list-paragraph2'> When player meets xp threshold, they level up, and get random choices on how to improve their character, these choices are
                       </p>
                       <ul>
-                        <li>Heavy attack <br></br>
-                          <p className='list-paragraph2'>(only applies during heavy attack)</p></li>
-
-                        <li>New ability <br></br>
-                          <p className='list-paragraph2'>General Utilities/Abilities to help survive the fight, but no means required to use</p>
-                        </li>
-
-                        <li>Passive
-                          <br></br>
-                          <p className='list-paragraph2'>These upgrades apply automatically without having to do anything</p>
 
 
-                        </li>
+                        <li>Stat increase <br></br>
+                          <p className='list-paragraph2'>flat level boost</p></li>
 
-                        <li>Powerup     <br></br>
-                          <p className='list-paragraph2'>These upgrades apply only when powerup is active, designed to be very overpowered</p>
+                        <li>Basic attack <br></br>
+                          <p className='list-paragraph2'>only applies during basic attack, may have cooldown. <br></br>for example, melee shockwave adds extra knockback on attack, every 8 seconds.</p></li>
 
-                        </li>
+                        <li>Special attack <br></br>
+                          <p className='list-paragraph2'>Strong skill, designed to be anime finisher move, creates synergy with gear.<br></br>for example, a projectile that scales until you ran out of mana, encouraging players to stack as much mana in their gear as possible.</p></li>
+
+                        <li>Powerup <br></br>
+                          <p className='list-paragraph2'>Allows players to define how exactly their character should behave when powering up.</p></li>
+
                       </ul>
                     </p>
 
                     <p>
-                      When player beats a bosswave, a loot chest spawns, that gives player gear, that will boost players passive stats:
+                      When player beats a boss, a loot chest spawns, that gives player gear, that will boost players passive stats:
                       <ul className='list-paragraph2'>
                         <li>Health</li>
                         <li>Max energy</li>
-                        <li>Physical Damage</li>
+                        <li>Max mana</li>
+                        <li>Damage</li>
 
-                        <li>Magic Damage</li>
-
-                        <li>Knockback strength</li>
+                        <li>Strength (knockback)</li>
 
                         <li>Knockback resistance</li>
+                        <li>Armor</li>
                         <li>Movement speed</li>
 
                       </ul>
                     </p>
-                    <p>If player manages to knock out an enemy, they player may steal their gear by walking up and interacting with the props.</p>
                     <p>Death mechanics
-                      <p className='list-paragraph2'>Dying will be treated as a time rewind to a point before the invasion begins, so most progress will be lost, but some can persist</p>
-                      <p className='list-paragraph2'>Things that persist are subject to change based on playtest feedback, but at this time these are the things that can persist between playthroughs:</p>
-
-                      <ul className='list-paragraph2'>
-                        <li>
-                          Bind up to 3 gear items
-                        </li>
-
-                        <li>
-                          Utilities
-                        </li>
+                      <p className='list-paragraph2'>Dying will case the player to be reincarnated again, no progression will persist between playthrougs</p>
 
 
-                      </ul>
 
                     </p>
                   </p>
@@ -637,16 +617,16 @@ function App() {
         */}
                 < div className='pre-tag-img ' >
 
-                  <img src={require("./Assets/ehggallery/1before-destruction.png")}></img>
-                  <img src={require("./Assets/ehggallery/2bpost destruction2.png")}></img>
+                  <img src={require("./Assets/level pre-destroy.png")}></img>
+                  <img src={require("./Assets/level post-destroy.png")}></img>
                   {/*      <div className='btn'>Read more</div>
 */}
                 </div>
-                <div className='pre-tag '>
+                <div className='pre-tag reset-left'>
 
                   <ul class='list-paragraph'>
-                    <li>Levels are medium-sized islands (250x250)<p className='list-paragraph2'>  with a lot of open space to fight in.</p></li>
-                    <li>Levels should look fruitful and filled with life.<p className='list-paragraph2'> </p></li>
+                    <li>Levels are composed of chunks of islands<p className='list-paragraph2'> Islands are filled with encounters, NPC's will not move away from their designated encounter unless disturbed</p></li>
+                    <p className='list-paragraph2'> Levels are destructable to create a sense of the world being destroyed</p>
                     <li>There shouldn't have to be many props<p className='list-paragraph2'> just enough to make it seem like there might be something living there.</p></li>
                     {
                       // <li>Limited amount of props <p className='list-paragraph2'>Every prop on the map should have a purpose, and something can interact with it.</p></li>
@@ -699,13 +679,52 @@ function App() {
         }
         {
 
+          contentChunk("Encounters",
+
+            <div className='pre-tag-full' >
+              < div className='content-wrapper level-design' >
+                {/*
+    <img className="monster-img"src={fetchMonsterImage(1)}></img>
+*/}
+                < div className='pre-tag-img ' >
+
+                  <img src={require("./Assets/encounter.png")}></img>
+                  {/*      <div className='btn'>Read more</div>
+*/}
+                </div>
+                <div className='pre-tag reset-left'>
+
+                  <ul class='list-paragraph'>
+                    <li>Encounters are minigames withing the world<p className='list-paragraph2'>
+                      Encounter types:
+                      <ul>Multiple minions</ul>
+
+                      <ul>Miniboss</ul>
+                      <ul>Bossfight</ul>
+                      <ul>Help npc in need (future)</ul>
+
+                    </p></li>
+                    <p className='list-paragraph2'>
+                      You can only trigger a bossfight by interacting with an object in the world, its always opt in, and you get to prepare for it.
+                      <br></br>It is possible to combine encounters together, increasing challenge
+                    </p>
+                  </ul>
+                </div>
+              </div></div>,
+            //   require("./Assets/ehgvids/9001 round 2.mp4")
+
+
+          )
+        }
+        {
+
           contentChunk("Enemy Design rulebook",
 
 
             <div className='content-wrapper'>
 
               <img className="monster-img" src={fetchMonsterImage(1)}></img>
-              <pre className='pre-tag '>
+              <pre className='pre-tag reset-left'>
                 <p>Each enemy will be designed with the goal of destroying as much of the world as possible.</p>
 
                 <p className='list-paragraph2'>  At baseline, enemies should be challenging, and work around this pipeline
@@ -729,14 +748,14 @@ function App() {
                   <li>Takes no damage except on the critical spots, player would have to climb on top of them to deal damage to them</li>
 
                 </ul>
-                Chunky Boss
+                Boss
                 <ul class='list-paragraph list-paragraph2'>
                   <li>Player dodges powerful attack, missing rewards player with a window to fight back</li>
                   <li>Massive environmental damage</li>
                   <li>2-3 different offensive moves</li>
                   <li>dev time ~2 weeks</li>
                 </ul>
-                Annoying minions
+                Minions
                 <ul class='list-paragraph list-paragraph2'>
 
                   <li>Chase 1 objective (player/healer target)</li>
@@ -775,12 +794,12 @@ function App() {
           contentChunk("Art style",
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(0)}></img>
-              <pre className='pre-tag'>
+              <pre className='pre-tag reset-left'>
                 <p>
                   Art style key points
                   <ul>
                     <li>Low poly</li>
-
+                    <li>Cell shaded outline</li>
                     <li>Comic</li>
 
                     <li>Clay</li>
@@ -846,7 +865,7 @@ function App() {
 
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(1)}></img>
-              <pre className='pre-tag'>
+              <pre className='pre-tag reset-left'>
 
                 <p class='list-paragraph'>
                   <p>player Character personality is childish, dont take things too seriously, but has a serious side aswell</p>
@@ -880,7 +899,7 @@ function App() {
           contentChunk("Inspiration",
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(1)}></img>
-              <pre className='pre-tag'>
+              <pre className='pre-tag reset-left'>
                 <p class='list-paragraph'>
                   EHG Takes inspiration from videogames and anime, its an amalgamation of things that i'd personally like to see in a videogame, such as
                   <ul className=' list-paragraph2'>
@@ -924,14 +943,14 @@ function App() {
 
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(1)}></img>
-              <pre className='pre-tag '>
+              <pre className='pre-tag reset-left'>
                 <p className='list-paragraph'>
                   <ul>
                     <li>
                       <p>Unity 2022</p>
                     </li>
                     <li>
-                      <p>Ragdolls: modified PuppetMaster</p>
+                      <p>Custom animation pipeline (EHG engine)</p>
                     </li>
 
                     <li>
@@ -959,12 +978,11 @@ function App() {
                   //technicalsExpanded &&
                   <div>
                     <p className='list-paragraph2'>
-                      Simplified overview of EHG Code architecture<br></br>
-                      (CLARIFICATION; Entity is not related to unity ECS in any way, its built using GameObjects runtime, just a naming convention)<br></br>
-                      Codebase & tools have been designed with Code First approach, where most of the actual work behind the game is done in code.
-                      <br></br><p>And it needs to be flexible enough to support my wild imagination.</p>
+                      This diagram describes the simplified code structure of EHG engine 0.3.
+                      <br></br>All major components are connected together with eventbus,
+                      i wrote an article about it on my <a href ="https://samulisalonen.dev/#/article/eventbus">Here</a>
                     </p>
-                    <img className="code-architecture" src={require("./Assets/ehg-code-diagram.png")}></img>
+                    <img className="code-architecture" src={require("./Assets/ehg3.png")}></img>
                   </div>
                 }
                 {
@@ -988,7 +1006,7 @@ function App() {
           contentChunk("Team",
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(1)}></img>
-              <pre className='pre-tag list-paragraph'>
+              <pre className='pre-tag list-paragraph reset-left'>
                 <ul>
                   <li>
                     Samuli Salonen | <span className='list-paragraph2'>Studio Owner, Programming, Game Design, 3D Modeling, Community manager</span>
@@ -1017,32 +1035,25 @@ function App() {
 
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(1)}></img>
-              <pre className='pre-tag'>
-                Short term development
+              <pre className='pre-tag reset-left'>
+                Updated roadmap since 29.12.2024
 
 
                 <ul className=' list-paragraph2'>
-                  <li>Add sound effects</li>
-
-                  <li>Improve physical prop stability</li>
-
-                  <li>Smoother Active ragdoll to optimized state transition</li>
-                  <li>Improve game balancing</li>
-
-                  <li>Iron out all current prototype abilities / enemies and make them playable</li>
-
-                  <li>Polish dynamic climbing so its not as janky</li>
-                  <li>Bosses specifically designed for the lava stage</li>
-                  <li>Steam build</li>
-
-                  <li>Steam Achievements</li>
-                  <li>Leaderboards</li>
-                  <li>Full controller support</li>
-
-                  <li>General optimization</li>
-
+                  <li>Make survivors gamemode fully playable</li>
+                  <li>Improve campaign map melee combat</li>
+                  <li>Implement grappling hook and horse Utilities into campaign map</li>
+                  
+                  <li>Steam leaderboards</li>
+                  
                 </ul>
-
+                Major milestones achieved in 2024: 
+                <ul className=' list-paragraph2'>
+                  <li>Soulslike combat engine that makes developing challenging bosses possible.</li>
+                  <li>General physics animation improvements</li>
+                  
+                </ul>
+                
               </pre>
               <img className="monster-img" src={fetchMonsterImage(2)}></img>
             </div>
@@ -1054,7 +1065,7 @@ function App() {
           contentChunk("Budget",
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(1)}></img>
-              <pre className='pre-tag'>
+              <pre className='pre-tag reset-left'>
                 <div className=' list-paragraph2'>
                   please email me at </div>salonen.samuli1@gmail.com
                 <div className=' list-paragraph2'> if you wish to get access to the budget information.
@@ -1073,7 +1084,7 @@ function App() {
             <div className='content-wrapper'>
               <img className="monster-img" src={fetchMonsterImage(1)}></img>
 
-              <pre className='pre-tag list-paragraph'>
+              <pre className='pre-tag list-paragraph reset-left'>
                 <ul>
 
                   <li>
@@ -1088,22 +1099,6 @@ function App() {
 
                 </ul>
 
-                <ul>
-
-                  <li>
-                    Steam wishlists: 2694
-                  </li>
-                  <li>
-                    Twitch following: 1600
-                  </li>
-                  <li>
-                    Twitter following: 1989
-                  </li>
-                  <li>
-                    Tiktok following: 3663
-                  </li>
-
-                </ul>
 
                 <div className=' list-paragraph2'>
                   Game is best suited for people who like to bootup a game a turn their brain off, and smack some aliens with Dragonball / One Punch Man style ridiculous combat.

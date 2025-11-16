@@ -1,0 +1,56 @@
+.patchnotes-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.patch-bugfix {
+  color: #FF5555; /* red */
+  font-weight: bold;
+}
+
+.patch-change {
+  color: #FFDD57; /* yellow */
+  font-weight: bold;
+}
+
+.patch-feature {
+  color: #1ABC9C; /* green */
+  font-weight: bold;
+}
+
+/* Optional spacing for each line */
+.patchnote-text div {
+  margin-bottom: 4px;
+}
+
+.patchnote {
+  background: var(--color-bg);
+  border: 1px solid var(--color-primary);
+
+  padding: 20px 25px;
+  box-shadow: 0 6px 18px var(--color-shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.patchnote:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--color-shadow-hover);
+}
+
+.patchnote h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.patchnote p {
+  color: var(--color-text-soft);
+  line-height: 1.6;
+  font-size: 1rem;
+  white-space: pre-line; /* supports multiline text from JSON */
+}

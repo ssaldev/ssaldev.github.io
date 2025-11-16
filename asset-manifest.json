@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0164267c.css",
-    "main.js": "/static/js/main.3b96abca.js",
+    "main.css": "/static/css/main.947ad63e.css",
+    "main.js": "/static/js/main.87d933b4.js",
     "static/js/787.6216e3e5.chunk.js": "/static/js/787.6216e3e5.chunk.js",
     "static/media/high asms.mp4": "/static/media/high asms.f856c960e6aca833412a.mp4",
     "static/media/physicsbasedcombat.mp4": "/static/media/physicsbasedcombat.e1c3507123bc702f844a.mp4",
@@ -43,12 +43,12 @@
     "static/media/youtube.png": "/static/media/youtube.964a324d3748ea2f99a1.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.0164267c.css.map": "/static/css/main.0164267c.css.map",
-    "main.3b96abca.js.map": "/static/js/main.3b96abca.js.map",
+    "main.947ad63e.css.map": "/static/css/main.947ad63e.css.map",
+    "main.87d933b4.js.map": "/static/js/main.87d933b4.js.map",
     "787.6216e3e5.chunk.js.map": "/static/js/787.6216e3e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0164267c.css",
-    "static/js/main.3b96abca.js"
+    "static/css/main.947ad63e.css",
+    "static/js/main.87d933b4.js"
   ]
 }

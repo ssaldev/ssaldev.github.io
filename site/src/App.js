@@ -30,6 +30,7 @@ import PatchNotes from './patchnotes.js';
 import Support from './Support.js';
 import Panel from './Panel.js';
 import TwitchPanel from './TwitchPanel.js';
+import RoadmapPanel from './Roadmap.js';
 const navbar = (discordLink, kofi, steam) => {
   return (<><li><a href="#">Patch Notes</a></li>
     <li><a href={steam}>Steam</a></li>
@@ -139,8 +140,23 @@ function App() {
               tags={["Early Access", "Roguelite", "Physics-Based", "Superhero", "Action"]}
             ></Game>
             <Panel >
-              <Support link={kofi}></Support>
-              <TwitchPanel channelName={twitchChannelName}></TwitchPanel>
+               <div className="flexbox-root flexgap">
+                <Support link={kofi}></Support>
+                <TwitchPanel channelName={twitchChannelName}></TwitchPanel>
+              </div>
+              <RoadmapPanel
+                milestones={[
+
+                  //Pending
+                  { status: 'In-Progress', text: 'Early access on steam' },
+                  
+                     { status: 'Pending', text: 'Upgrade system design' },
+                  { status: 'Pending', text: 'Physics engine upgrade' },
+
+                  { status: 'Completed', text: 'Initial prototype finished' },
+                ]}
+              />
+             
             </Panel>
             {/*<Game
               description={"Chat Ragdoll Racing is fully physics-based ragdoll animated simulation game where Twitch Streamers can host games for their communities and have people race against each other in a wild physics-based world."}
@@ -150,7 +166,9 @@ function App() {
             ></Game>
             */}
           </div>
+          <div>
 
+          </div>
           <div>
             {
               <PatchNotes></PatchNotes>
